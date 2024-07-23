@@ -1,0 +1,15 @@
+﻿<Window x:Class="Assessement_1_Part_A___Design.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Assessement_1_Part_A___Design"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <xctk:IntegerUpDown x:Name="ServiceTag"  Value="100" Margin="64,64,640,316" Minimum="100" Maximum="900" Increment="10" Text="100" AutoSelectBehavior="OnFocus" DefaultValue="100" DisplayDefaultValueOnEmptyText="True" AllowTextInput="False" IsManipulationEnabled="True"/>
+        
+    </Grid>
+
+</Window>
