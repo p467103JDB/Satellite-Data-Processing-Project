@@ -122,11 +122,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\p467103\\source\\repos\\Assessement 1 Part A - Design\\Assessement 1 Part A - Design\\Assessement 1 Part A - Design.csproj",
+      "projectUniqueName": "C:\\Users\\p467103\\Documents\\GitHub\\Satellite-Data-Processing-Project\\Assessement 1 Part A - Design\\Assessement 1 Part A - Design.csproj",
       "projectName": "Assessement 1 Part A - Design",
-      "projectPath": "C:\\Users\\p467103\\source\\repos\\Assessement 1 Part A - Design\\Assessement 1 Part A - Design\\Assessement 1 Part A - Design.csproj",
+      "projectPath": "C:\\Users\\p467103\\Documents\\GitHub\\Satellite-Data-Processing-Project\\Assessement 1 Part A - Design\\Assessement 1 Part A - Design.csproj",
       "packagesPath": "C:\\Users\\p467103\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\p467103\\source\\repos\\Assessement 1 Part A - Design\\Assessement 1 Part A - Design\\obj\\",
+      "outputPath": "C:\\Users\\p467103\\Documents\\GitHub\\Satellite-Data-Processing-Project\\Assessement 1 Part A - Design\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\p467103\\AppData\\Roaming\\NuGet\\NuGet.Config",

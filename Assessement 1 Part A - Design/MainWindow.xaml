@@ -8,8 +8,23 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <xctk:IntegerUpDown x:Name="ServiceTag"  Value="100" Margin="64,64,640,316" Minimum="100" Maximum="900" Increment="10" Text="100" AutoSelectBehavior="OnFocus" DefaultValue="100" DisplayDefaultValueOnEmptyText="True" AllowTextInput="False" IsManipulationEnabled="True"/>
-        
+        <xctk:IntegerUpDown x:Name="ServiceTag"  Value="100" Margin="251,54,453,326" Minimum="100" Maximum="900" Increment="10" Text="100" AutoSelectBehavior="OnFocus" DefaultValue="100" DisplayDefaultValueOnEmptyText="True" AllowTextInput="False" IsManipulationEnabled="True"/>
+        <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Margin="32,136,603,64"/>
+        <ListView d:ItemsSource="{d:SampleData ItemCount=5}" Margin="400,136,227,64">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ListView d:ItemsSource="{d:SampleData ItemCount=5}" Margin="595,136,32,64">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
     </Grid>
 
 </Window>

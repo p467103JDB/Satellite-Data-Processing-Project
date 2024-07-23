@@ -9,6 +9,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections.Generic;
+using System.IO;
 
 namespace Assessement_1_Part_A___Design
 {
@@ -20,6 +21,7 @@ namespace Assessement_1_Part_A___Design
         public MainWindow()
         {
             InitializeComponent();
+            LoadData();
             // Load DLL from root dir
         }
         // Global Methods
@@ -28,8 +30,22 @@ namespace Assessement_1_Part_A___Design
         LinkedList<double> SensorB = new LinkedList<double>();
 
         // 4.2 Load DLL method
+        private void LoadData()
+        {
+            string filePath = "Galileo6.dll";
+
+            if (File.Exists(filePath))
+            {
+                
+            }
+            else
+            {
+                MessageBox.Show("Dll not found");
+            }
+        }
 
         // 4.3 Show all sensor data
+
 
         // 4.4 Button Method - Triggers Load Data & Show all sensor data
 
