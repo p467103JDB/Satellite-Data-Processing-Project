@@ -10,6 +10,10 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections.Generic;
 using System.IO;
+using Galileo6; // i thought it was wrong before... but it was right - import new library
+// ReadData Decompiled say it's a class - so i need to create an object of the class to use its methods sooo
+// ReadData reader = new ReadData(); is required ahead.
+
 
 namespace Assessement_1_Part_A___Design
 {
@@ -25,27 +29,49 @@ namespace Assessement_1_Part_A___Design
             // Load DLL from root dir
         }
         // Global Methods
-        // 4.1 Two Data Structures
-        LinkedList<double> SensorA = new LinkedList<double>();
-        LinkedList<double> SensorB = new LinkedList<double>();
+        // 4.1 Two Data Structures - the only global variables that are allowed for this assignment
+        LinkedList<double> Sensor_A = new LinkedList<double>();
+        LinkedList<double> Sensor_B = new LinkedList<double>();
+       
 
         // 4.2 Load DLL method
         private void LoadData()
         {
-            string filePath = "Galileo6.dll";
+            const int total = 4; // 400 is the max required.
+            ReadData readData = new ReadData(); // 4.2 - new instance of library required.
 
-            if (File.Exists(filePath))
+            for (int i = 0; i < total; i++)
             {
-                
+                Sensor_A.AddLast(readData.SensorA(double.Parse(MuVal.Text), double.Parse(SigmaVal.Text)));
+                Sensor_B.AddLast(readData.SensorB(double.Parse(MuVal.Text), double.Parse(SigmaVal.Text)));
             }
-            else
-            {
-                MessageBox.Show("Dll not found");
-            }
+            ShowAllSensorData();
         }
 
         // 4.3 Show all sensor data
+        private void ShowAllSensorData()
+        {
+            /*
+            Create a custom method called “ShowAllSensorData” which will display both LinkedLists in a ListView. 
+            Add column titles “Sensor A” and “Sensor B” to the ListView. The input parameters are empty, and the return type is void. 
+            */
+            ListViewSensorA.Items.Clear();
+            ListViewSensorB.Items.Clear();
 
+            foreach (double data in Sensor_A)
+            {
+
+                ListViewSensorA.Items.Add(data);
+
+            }
+            foreach (double data in Sensor_B)
+            {
+                ListViewSensorB.Items.Add(data.ToString());
+            }
+
+            //ListViewSensorA.ItemsSource = Sensor_A;
+            //ListViewSensorB.ItemsSource = Sensor_B;
+        }
 
         // 4.4 Button Method - Triggers Load Data & Show all sensor data
 

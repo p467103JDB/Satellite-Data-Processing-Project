@@ -1,0 +1,98 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\GitHub Clones\\Satellite-Data-Processing-Project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A838BFBD-114B-4541-824C-E34989020A60}|Assessement 1 Part A - Design\\Assessement 1 Part A - Design.csproj|d:\\github clones\\satellite-data-processing-project\\assessement 1 part a - design\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A838BFBD-114B-4541-824C-E34989020A60}|Assessement 1 Part A - Design\\Assessement 1 Part A - Design.csproj|solutionrelative:assessement 1 part a - design\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A838BFBD-114B-4541-824C-E34989020A60}|Assessement 1 Part A - Design\\Assessement 1 Part A - Design.csproj|d:\\github clones\\satellite-data-processing-project\\assessement 1 part a - design\\assessement 1 part a - design.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A838BFBD-114B-4541-824C-E34989020A60}|Assessement 1 Part A - Design\\Assessement 1 Part A - Design.csproj|solutionrelative:assessement 1 part a - design\\assessement 1 part a - design.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A838BFBD-114B-4541-824C-E34989020A60}|Assessement 1 Part A - Design\\Assessement 1 Part A - Design.csproj|d:\\github clones\\satellite-data-processing-project\\assessement 1 part a - design\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A838BFBD-114B-4541-824C-E34989020A60}|Assessement 1 Part A - Design\\Assessement 1 Part A - Design.csproj|solutionrelative:assessement 1 part a - design\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A838BFBD-114B-4541-824C-E34989020A60}|Assessement 1 Part A - Design\\Assessement 1 Part A - Design.csproj|d:\\github clones\\satellite-data-processing-project\\assessement 1 part a - design\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A838BFBD-114B-4541-824C-E34989020A60}|Assessement 1 Part A - Design\\Assessement 1 Part A - Design.csproj|solutionrelative:assessement 1 part a - design\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\GitHub Clones\\Satellite-Data-Processing-Project\\Assessement 1 Part A - Design\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Assessement 1 Part A - Design\\MainWindow.xaml",
+              "ToolTip": "D:\\GitHub Clones\\Satellite-Data-Processing-Project\\Assessement 1 Part A - Design\\MainWindow.xaml",
+              "RelativeToolTip": "Assessement 1 Part A - Design\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-28T07:38:52.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\GitHub Clones\\Satellite-Data-Processing-Project\\Assessement 1 Part A - Design\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Assessement 1 Part A - Design\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\GitHub Clones\\Satellite-Data-Processing-Project\\Assessement 1 Part A - Design\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Assessement 1 Part A - Design\\MainWindow.xaml.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAtwD8AAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-27T13:39:00.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Assessement 1 Part A - Design.csproj",
+              "DocumentMoniker": "D:\\GitHub Clones\\Satellite-Data-Processing-Project\\Assessement 1 Part A - Design\\Assessement 1 Part A - Design.csproj",
+              "RelativeDocumentMoniker": "Assessement 1 Part A - Design\\Assessement 1 Part A - Design.csproj",
+              "ToolTip": "D:\\GitHub Clones\\Satellite-Data-Processing-Project\\Assessement 1 Part A - Design\\Assessement 1 Part A - Design.csproj",
+              "RelativeToolTip": "Assessement 1 Part A - Design\\Assessement 1 Part A - Design.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-07-27T13:37:03.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\GitHub Clones\\Satellite-Data-Processing-Project\\Assessement 1 Part A - Design\\App.xaml",
+              "RelativeDocumentMoniker": "Assessement 1 Part A - Design\\App.xaml",
+              "ToolTip": "D:\\GitHub Clones\\Satellite-Data-Processing-Project\\Assessement 1 Part A - Design\\App.xaml",
+              "RelativeToolTip": "Assessement 1 Part A - Design\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-27T13:22:22.47Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

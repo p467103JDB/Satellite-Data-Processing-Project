@@ -77,3 +77,44 @@ C:\Users\p467103\Documents\GitHub\Satellite-Data-Processing-Project\Assessement 
 C:\Users\p467103\Documents\GitHub\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.pdb
 C:\Users\p467103\Documents\GitHub\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.genruntimeconfig.cache
 C:\Users\p467103\Documents\GitHub\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\ref\Assessement 1 Part A - Design.dll
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Assessement 1 Part A - Design.exe
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Assessement 1 Part A - Design.deps.json
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Assessement 1 Part A - Design.runtimeconfig.json
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Assessement 1 Part A - Design.dll
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Assessement 1 Part A - Design.pdb
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Xceed.Wpf.AvalonDock.dll
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Xceed.Wpf.Toolkit.dll
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\de\Xceed.Wpf.AvalonDock.resources.dll
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\es\Xceed.Wpf.AvalonDock.resources.dll
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\fr\Xceed.Wpf.AvalonDock.resources.dll
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\hu\Xceed.Wpf.AvalonDock.resources.dll
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\it\Xceed.Wpf.AvalonDock.resources.dll
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\ro\Xceed.Wpf.AvalonDock.resources.dll
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\ru\Xceed.Wpf.AvalonDock.resources.dll
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\sv\Xceed.Wpf.AvalonDock.resources.dll
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Galileo6.dll
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.csproj.AssemblyReference.cache
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\MainWindow.g.cs
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\App.g.cs
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design_MarkupCompile.cache
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design_MarkupCompile.lref
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\MainWindow.baml
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.g.resources
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.AssemblyInfoInputs.cache
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.AssemblyInfo.cs
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.csproj.CoreCompileInputs.cache
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.sourcelink.json
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessem.7D59D06B.Up2Date
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.dll
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\refint\Assessement 1 Part A - Design.dll
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.pdb
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.genruntimeconfig.cache
+D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\ref\Assessement 1 Part A - Design.dll

@@ -8,19 +8,20 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <xctk:IntegerUpDown x:Name="ServiceTag"  Value="100" Margin="251,54,453,326" Minimum="100" Maximum="900" Increment="10" Text="100" AutoSelectBehavior="OnFocus" DefaultValue="100" DisplayDefaultValueOnEmptyText="True" AllowTextInput="False" IsManipulationEnabled="True"/>
+        <xctk:DecimalUpDown x:Name="SigmaVal" Margin="284,64,420,316" Minimum="10.0" Maximum="20.0" Value="10.0" />
+        <xctk:DecimalUpDown x:Name="MuVal" Margin="284,136,420,244" Minimum="35.0" Maximum="75.0" Value="50.0" />
         <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Margin="32,136,603,64"/>
-        <ListView d:ItemsSource="{d:SampleData ItemCount=5}" Margin="400,136,227,64">
+        <ListView x:Name="ListViewSensorA" Margin="400,64,227,64">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn Header="Sensor A" Width="168"/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListView d:ItemsSource="{d:SampleData ItemCount=5}" Margin="595,136,32,64">
+        <ListView x:Name="ListViewSensorB" Margin="595,64,32,64">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn Header="Sensor B" Width="168"/>
                 </GridView>
             </ListView.View>
         </ListView>

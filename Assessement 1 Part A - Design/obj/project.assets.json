@@ -117,19 +117,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\p467103\\.nuget\\packages\\": {}
+    "C:\\Users\\jackd\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\p467103\\Documents\\GitHub\\Satellite-Data-Processing-Project\\Assessement 1 Part A - Design\\Assessement 1 Part A - Design.csproj",
+      "projectUniqueName": "D:\\GitHub Clones\\Satellite-Data-Processing-Project\\Assessement 1 Part A - Design\\Assessement 1 Part A - Design.csproj",
       "projectName": "Assessement 1 Part A - Design",
-      "projectPath": "C:\\Users\\p467103\\Documents\\GitHub\\Satellite-Data-Processing-Project\\Assessement 1 Part A - Design\\Assessement 1 Part A - Design.csproj",
-      "packagesPath": "C:\\Users\\p467103\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\p467103\\Documents\\GitHub\\Satellite-Data-Processing-Project\\Assessement 1 Part A - Design\\obj\\",
+      "projectPath": "D:\\GitHub Clones\\Satellite-Data-Processing-Project\\Assessement 1 Part A - Design\\Assessement 1 Part A - Design.csproj",
+      "packagesPath": "C:\\Users\\jackd\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHub Clones\\Satellite-Data-Processing-Project\\Assessement 1 Part A - Design\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\p467103\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jackd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -149,6 +154,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -179,7 +189,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
