@@ -130,12 +130,13 @@ namespace Assessement_1_Part_A___Design
             int min = 0;
             int max = NumberOfNodes(lListSort);
 
-            LinkedListNode<double> currentMin = lListSort.Find(lListSort.ElementAt(min));
+            
             //LinkedListNode<double> currentI = lListSort.Find(lListSort.ElementAt(i));
 
             for ( int i = 0; i < max - 1; i++)
             {
                 min = i;
+                LinkedListNode<double> currentMin = lListSort.Find(lListSort.ElementAt(min));
                 LinkedListNode<double> currentI = lListSort.Find(lListSort.ElementAt(i));
                 var temp = currentMin.Value;
                 currentMin.Value = currentI.Value;
@@ -178,7 +179,7 @@ namespace Assessement_1_Part_A___Design
         // d. method sensor B insertion sort
         #endregion
 
-        // 4.13 Numeric input control for SIGMA (Min value 10 - max 20) and Mu (Min value 35 - max 75 - DEFAULT 50)
+        // 4.13 Numeric input control for SIGMA (Min value 10 - max 20) and Mu (Min value 35 - max 75 - DEFAULT 50) - done
 
         // 4.14 textboxes for search value
 

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Assessement 1 Part A - Design")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d486f562c4088f24d824c728e09aca9a0c24285")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+84d91392a3e2cf2e1beec71076a34876555bce03")]
 [assembly: System.Reflection.AssemblyProductAttribute("Assessement 1 Part A - Design")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Assessement 1 Part A - Design")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
