@@ -50,15 +50,16 @@ namespace Assessement_1_Part_A___Design
         // 4.3 Show all sensor data
         private void ShowAllSensorData()
         {
-            ListViewSensorA.Items.Clear(); // Clear listviews
-            ListViewSensorB.Items.Clear();
-            foreach (double data in Sensor_A) // add to listviews to display them
+
+            ListViewSensorData.Items.Clear();
+            var nodeA = Sensor_A.First; // im duplicating the linkedlist so that i dont fw the original. is this bad?
+            var nodeB = Sensor_B.First;
+            for (int i = 0; i < Sensor_A.Count; i++)
             {
-                ListViewSensorA.Items.Add(data);
-            }
-            foreach (double data in Sensor_B)
-            {
-                ListViewSensorB.Items.Add(data);
+                var clData = new { Column1 = nodeA.Value, Column2 = nodeB.Value }; // Yeah figuring this out was a complete fluke, i was fortunate the autofill knew what I was doing here.
+                ListViewSensorData.Items.Add(clData);
+                nodeA = nodeA.Next;
+                nodeB = nodeB.Next;
             }
         }
 
@@ -67,7 +68,8 @@ namespace Assessement_1_Part_A___Design
         {
             LoadData();
             ShowAllSensorData();
-            DisplayListboxData();
+            DisplayListboxData(Sensor_A, ListBoxSensorA); // Mickey mouse pointless exercise... it's done however
+            DisplayListboxData(Sensor_B, ListBoxSensorB);
         }
         #endregion
 
@@ -83,45 +85,14 @@ namespace Assessement_1_Part_A___Design
         }
 
         // 4.6 Display List box data - Displays content of LinkedList inside appropriate listbox. - Method signature requires two input parameters
-        // 
-        /*
-        Create a method called “DisplayListboxData” that will display the content of a LinkedList inside the appropriate ListBox. 
-        method signature will have two input parameters; a LinkedList, and the ListBox name.  
-        calling code argument is the linkedlist name and the listbox name. 
-         */
-
-        private void DisplayListboxData()
+        private void DisplayListboxData(LinkedList<double> lList , ListBox lBox )
         {
-            // Can this be done in a better way??? I think creating a new item for everyloop seems a bit extreme, i mean it literally doubles the memory usage i assume. <------ *FIND BETTER SOLUTION*
-            ListBoxSensorData.Items.Clear();
-            //List<(double Column1, double Column2)> combinedList = Sensor_A.Zip(Sensor_B, (item1, item2) => (Column1: item1, Column2: item2)).ToList(); // sorcery
-
-            var nodeA = Sensor_A.First;
-            var nodeB = Sensor_B.First;
-            for (int i = 0; i < Sensor_A.Count; i++)
+            lBox.Items.Clear();
+            foreach (double data in lList) // add to listviews to display them
             {
-                var clData = new { Column1 = nodeA.Value, Column2 = nodeB.Value }; // Yeah figuring this out was a complete fluke, i was fortunate the autofill knew what I was doing here.
-                ListBoxSensorData.Items.Add(clData);
-                nodeA = nodeA.Next;
-                nodeB = nodeB.Next; 
+                var cA = new { Column1 = data };
+                lBox.Items.Add(cA);
             }
-
-
-            // This one is dumb, i know it is but it works for now.... Will ask Milan on how it could be improved
-            /*
-            foreach(var item in combinedList) 
-            { 
-                var clData = new { Column1 = item.Column1, Column2 = item.Column2 }; // Yeah figuring this out was a complete fluke, i was fortunate the autofill knew what I was doing here.
-                ListBoxSensorData.Items.Add(clData);
-            }*/
-
-
-            // You'd this this one would work but no.....
-            /*
-            foreach (var (column1, column2) in combinedList)
-            {
-                ListBoxSensorData.Items.Add((column1, column2));
-            }*/
         }
 
         #endregion
