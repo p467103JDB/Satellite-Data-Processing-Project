@@ -50,7 +50,6 @@ namespace Assessement_1_Part_A___Design
         // 4.3 Show all sensor data
         private void ShowAllSensorData()
         {
-
             ListViewSensorData.Items.Clear();
             var nodeA = Sensor_A.First; // im duplicating the linkedlist so that i dont fw the original. is this bad?
             var nodeB = Sensor_B.First;
@@ -76,12 +75,9 @@ namespace Assessement_1_Part_A___Design
         // Utility Methods
         #region Utility Methods
         // 4.5 Number of nodes Method 
-        private void Get_Total_Nodes()
+        private int NumberOfNodes(LinkedList<double> lListNode)
         {
-
-            // Im assuming i need to collect the listview/linkedlist from a button that passes the specified list through.
-            // But if im generating 400 doubles per linkedlist to begin with... why is this ever needed if i know that the number is always 400?
-
+            return lListNode.Count;
         }
 
         // 4.6 Display List box data - Displays content of LinkedList inside appropriate listbox. - Method signature requires two input parameters
@@ -100,6 +96,64 @@ namespace Assessement_1_Part_A___Design
         // Sort and search methods.
         #region Sort and Search
         // 4.7 Selection Sort - Refer to psuedo code in appendix of AP 1 Part B
+        /*
+            integer min => 0 
+            integer max => numberOfNodes(list) 
+            for ( i = 0 to max - 1 ) 
+            {
+                min => i
+                for ( j = i + 1 to max )
+                {
+                    if (list element(j) < list element(min))
+                    {
+                         min => j 
+                    }
+                }
+            }
+           
+            if (list element(j) < list element(min)) 
+            min => j 
+            END for 
+
+            // Supplied C# code 
+            LinkedListNode<double> currentMin = list.Find(list.ElementAt(min)) 
+            LinkedListNode<double> currentI = list.Find(list.ElementAt(i)) 
+            // End of supplied C# code 
+            var temp = currentMin.Value 
+            currentMin.Value = currentI.Value 
+            currentI.Value = temp 
+            END for 
+         */
+
+        private bool SelectionSort(LinkedList<double> lListSort)
+        {
+            int min = 0;
+            int max = NumberOfNodes(lListSort);
+
+            LinkedListNode<double> currentMin = lListSort.Find(lListSort.ElementAt(min));
+            //LinkedListNode<double> currentI = lListSort.Find(lListSort.ElementAt(i));
+
+            for ( int i = 0; i < max - 1; i++)
+            {
+                min = i;
+                LinkedListNode<double> currentI = lListSort.Find(lListSort.ElementAt(i));
+                var temp = currentMin.Value;
+                currentMin.Value = currentI.Value;
+                currentI.Value = temp;
+            }
+
+            return false;
+        }
+
+        private void ButtonSelectionSort_A_Click(object sender, RoutedEventArgs e)
+        {
+            SelectionSort(Sensor_A);
+        }
+
+
+
+
+
 
         // 4.8 Insertion Sort - Same as above
 

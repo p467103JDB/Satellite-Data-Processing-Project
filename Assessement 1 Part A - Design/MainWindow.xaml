@@ -21,7 +21,7 @@
             </ListBox.ItemTemplate>
         </ListView>
         
-        <ListBox x:Name="ListBoxSensorA" Margin="400,64,227,64" ItemsSource="{Binding Sensor_A}">
+        <ListBox x:Name="ListBoxSensorA" Margin="400,64,227,64" ItemsSource="{Binding Sensor_A}" SelectionMode="Multiple">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
@@ -31,7 +31,7 @@
             </ListBox.ItemTemplate>
         </ListBox>
        
-        <ListView x:Name="ListBoxSensorB" Margin="595,64,32,64">
+        <ListView x:Name="ListBoxSensorB" Margin="595,64,32,64" SelectionMode="Multiple">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
@@ -41,6 +41,7 @@
             </ListBox.ItemTemplate>
         </ListView>
         <Button x:Name="Reset_Data" Content="Load Sensor Data" HorizontalAlignment="Left" Margin="80,322,0,0" VerticalAlignment="Top" Height="32" Width="96" Click="Load_Data_Click"/>
+        <Button x:Name="ButtonSelectionSort_A" Content="Button" HorizontalAlignment="Left" Margin="297,105,0,0" VerticalAlignment="Top" Click="ButtonSelectionSort_A_Click"/>
 
     </Grid>
 
