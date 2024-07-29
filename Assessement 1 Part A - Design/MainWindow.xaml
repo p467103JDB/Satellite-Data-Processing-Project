@@ -8,23 +8,34 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <xctk:DecimalUpDown x:Name="SigmaVal" Margin="284,64,420,316" Minimum="10.0" Maximum="20.0" Value="10.0" />
-        <xctk:DecimalUpDown x:Name="MuVal" Margin="284,136,420,244" Minimum="35.0" Maximum="75.0" Value="50.0" />
-        <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Margin="32,136,603,64"/>
+        <xctk:DecimalUpDown x:Name="SigmaVal" Margin="32,370,672,10" Minimum="10.0" Maximum="20.0" Value="10.0" />
+        <xctk:DecimalUpDown x:Name="MuVal" Margin="128,370,576,10" Minimum="35.0" Maximum="75.0" Value="50.0" />
+        <ListBox x:Name="ListBoxSensorData" Margin="32,64,576,101" ItemsSource="{Binding combinedList}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Path=Column1}" MinWidth="64"/>
+                        <TextBlock Text="{Binding Path=Column2}" MinWidth="64"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        
         <ListView x:Name="ListViewSensorA" Margin="400,64,227,64">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Sensor A" Width="168"/>
+                    <GridViewColumn Header="Sensor A" Width="130"/>
                 </GridView>
             </ListView.View>
         </ListView>
         <ListView x:Name="ListViewSensorB" Margin="595,64,32,64">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Sensor B" Width="168"/>
+                    <GridViewColumn Header="Sensor B" Width="130"/>
                 </GridView>
             </ListView.View>
         </ListView>
+        <Button x:Name="Reset_Data" Content="Load Sensor Data" HorizontalAlignment="Left" Margin="80,322,0,0" VerticalAlignment="Top" Height="32" Width="96" Click="Load_Data_Click"/>
 
     </Grid>
 

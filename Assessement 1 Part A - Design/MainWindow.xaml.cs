@@ -25,62 +25,104 @@ namespace Assessement_1_Part_A___Design
         public MainWindow()
         {
             InitializeComponent();
-            LoadData();
-            // Load DLL from root dir
         }
-        // Global Methods
         // 4.1 Two Data Structures - the only global variables that are allowed for this assignment
         LinkedList<double> Sensor_A = new LinkedList<double>();
         LinkedList<double> Sensor_B = new LinkedList<double>();
        
-
+        // Global Methods
+        #region Global Methods
         // 4.2 Load DLL method
         private void LoadData()
         {
-            const int total = 4; // 400 is the max required.
-            ReadData readData = new ReadData(); // 4.2 - new instance of library required.
+            const int total = 400; // 400 is the max required.
+            Sensor_A.Clear();
+            Sensor_B.Clear();
 
+            ReadData readData = new ReadData(); // 4.2 - new instance of library required.
             for (int i = 0; i < total; i++)
             {
-                Sensor_A.AddLast(readData.SensorA(double.Parse(MuVal.Text), double.Parse(SigmaVal.Text)));
-                Sensor_B.AddLast(readData.SensorB(double.Parse(MuVal.Text), double.Parse(SigmaVal.Text)));
+                Sensor_A.AddLast(readData.SensorA(double.Parse(MuVal.Text), double.Parse(SigmaVal.Text))); // Get text from Sigma and MU and parse them.
+                Sensor_B.AddLast(readData.SensorB(double.Parse(MuVal.Text), double.Parse(SigmaVal.Text))); // I think theres probably a better way of doing this but it works for now.
             }
-            ShowAllSensorData();
         }
 
         // 4.3 Show all sensor data
         private void ShowAllSensorData()
         {
-            /*
-            Create a custom method called “ShowAllSensorData” which will display both LinkedLists in a ListView. 
-            Add column titles “Sensor A” and “Sensor B” to the ListView. The input parameters are empty, and the return type is void. 
-            */
-            ListViewSensorA.Items.Clear();
+            ListViewSensorA.Items.Clear(); // Clear listviews
             ListViewSensorB.Items.Clear();
-
-            foreach (double data in Sensor_A)
+            foreach (double data in Sensor_A) // add to listviews to display them
             {
-
                 ListViewSensorA.Items.Add(data);
-
             }
             foreach (double data in Sensor_B)
             {
-                ListViewSensorB.Items.Add(data.ToString());
+                ListViewSensorB.Items.Add(data);
             }
-
-            //ListViewSensorA.ItemsSource = Sensor_A;
-            //ListViewSensorB.ItemsSource = Sensor_B;
         }
 
-        // 4.4 Button Method - Triggers Load Data & Show all sensor data
-
+        // 4.4 Button Method - Triggers LoadData & Showallsensordata
+        private void Load_Data_Click(object sender, RoutedEventArgs e)
+        {
+            LoadData();
+            ShowAllSensorData();
+            DisplayListboxData();
+        }
+        #endregion
 
         // Utility Methods
         #region Utility Methods
         // 4.5 Number of nodes Method 
+        private void Get_Total_Nodes()
+        {
 
-        // 4.6 Display List box data - Displays content of LinkedList ubsude appropriate listbox. - Method signature requires two input parameters.
+            // Im assuming i need to collect the listview/linkedlist from a button that passes the specified list through.
+            // But if im generating 400 doubles per linkedlist to begin with... why is this ever needed if i know that the number is always 400?
+
+        }
+
+        // 4.6 Display List box data - Displays content of LinkedList inside appropriate listbox. - Method signature requires two input parameters
+        // 
+        /*
+        Create a method called “DisplayListboxData” that will display the content of a LinkedList inside the appropriate ListBox. 
+        method signature will have two input parameters; a LinkedList, and the ListBox name.  
+        calling code argument is the linkedlist name and the listbox name. 
+         */
+
+        private void DisplayListboxData()
+        {
+            // Can this be done in a better way??? I think creating a new item for everyloop seems a bit extreme, i mean it literally doubles the memory usage i assume. <------ *FIND BETTER SOLUTION*
+            ListBoxSensorData.Items.Clear();
+            //List<(double Column1, double Column2)> combinedList = Sensor_A.Zip(Sensor_B, (item1, item2) => (Column1: item1, Column2: item2)).ToList(); // sorcery
+
+            var nodeA = Sensor_A.First;
+            var nodeB = Sensor_B.First;
+            for (int i = 0; i < Sensor_A.Count; i++)
+            {
+                var clData = new { Column1 = nodeA.Value, Column2 = nodeB.Value }; // Yeah figuring this out was a complete fluke, i was fortunate the autofill knew what I was doing here.
+                ListBoxSensorData.Items.Add(clData);
+                nodeA = nodeA.Next;
+                nodeB = nodeB.Next; 
+            }
+
+
+            // This one is dumb, i know it is but it works for now.... Will ask Milan on how it could be improved
+            /*
+            foreach(var item in combinedList) 
+            { 
+                var clData = new { Column1 = item.Column1, Column2 = item.Column2 }; // Yeah figuring this out was a complete fluke, i was fortunate the autofill knew what I was doing here.
+                ListBoxSensorData.Items.Add(clData);
+            }*/
+
+
+            // You'd this this one would work but no.....
+            /*
+            foreach (var (column1, column2) in combinedList)
+            {
+                ListBoxSensorData.Items.Add((column1, column2));
+            }*/
+        }
 
         #endregion
 
