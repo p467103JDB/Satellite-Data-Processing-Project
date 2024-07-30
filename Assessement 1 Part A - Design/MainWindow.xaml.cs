@@ -35,7 +35,7 @@ namespace Assessement_1_Part_A___Design
         // 4.2 Load DLL method
         private void LoadData()
         {
-            const int total = 400; // 400 is the max required.
+            const int total = 4; // 400 is the max required.
             Sensor_A.Clear();
             Sensor_B.Clear();
 
@@ -86,7 +86,7 @@ namespace Assessement_1_Part_A___Design
             lBox.Items.Clear();
             foreach (double data in lList) // add to listviews to display them
             {
-                var cA = new { Column1 = data };
+                var cA = new { Column = data };
                 lBox.Items.Add(cA);
             }
         }
@@ -95,70 +95,72 @@ namespace Assessement_1_Part_A___Design
 
         // Sort and search methods.
         #region Sort and Search
-        // 4.7 Selection Sort - Refer to psuedo code in appendix of AP 1 Part B
-        /*
-            integer min => 0 
-            integer max => numberOfNodes(list) 
-            for ( i = 0 to max - 1 ) 
-            {
-                min => i
-                for ( j = i + 1 to max )
-                {
-                    if (list element(j) < list element(min))
-                    {
-                         min => j 
-                    }
-                }
-            }
-           
-            if (list element(j) < list element(min)) 
-            min => j 
-            END for 
-
-            // Supplied C# code 
-            LinkedListNode<double> currentMin = list.Find(list.ElementAt(min)) 
-            LinkedListNode<double> currentI = list.Find(list.ElementAt(i)) 
-            // End of supplied C# code 
-            var temp = currentMin.Value 
-            currentMin.Value = currentI.Value 
-            currentI.Value = temp 
-            END for 
-         */
-
+        // 4.7 Selection Sort - Refer to psuedo code in appendix of AP 1 Part B *DONE*
         private bool SelectionSort(LinkedList<double> lListSort)
         {
-            int min = 0;
+            int min;
             int max = NumberOfNodes(lListSort);
-
-            
-            //LinkedListNode<double> currentI = lListSort.Find(lListSort.ElementAt(i));
-
-            for ( int i = 0; i < max - 1; i++)
+            for (int i = 0; i < max - 1; i++)
             {
                 min = i;
+                for (int j = i + 1; j < max; j++)
+                {
+                    if (lListSort.ElementAt(j) < lListSort.ElementAt(min)) // is element 1 smaller than element 0
+                    {
+                        min = j;
+                    }
+                }
                 LinkedListNode<double> currentMin = lListSort.Find(lListSort.ElementAt(min));
                 LinkedListNode<double> currentI = lListSort.Find(lListSort.ElementAt(i));
                 var temp = currentMin.Value;
                 currentMin.Value = currentI.Value;
                 currentI.Value = temp;
             }
-
-            return false;
+            return true;
         }
 
-        private void ButtonSelectionSort_A_Click(object sender, RoutedEventArgs e)
+        // 4.8 Insertion Sort - Same as above *DONE*
+        private bool InsertionSort(LinkedList<double> lListSort)
         {
-            SelectionSort(Sensor_A);
+            int max = NumberOfNodes(lListSort) - 1;
+
+            for (int i = 0; i < max; i++)
+            {
+                for (int j = i + 1; j > 0; j--)
+                {
+                    if (lListSort.ElementAt(j - 1) > lListSort.ElementAt(j))
+                    {
+                        LinkedListNode<double> current = lListSort.Find(lListSort.ElementAt(j));
+                        var temp = lListSort.ElementAt(j - 1);
+                        current.Previous.Value = lListSort.ElementAt(j); // that is what stumped me for 30 minutes. gadddfkndammit
+                        current.Value = temp;
+                    }
+                }
+            }
+            return true;
         }
-
-
-
-
-
-
-        // 4.8 Insertion Sort - Same as above
 
         // 4.9 Binary Search Iterative - 
+        private int BinarySearchIterative (LinkedList<double> lListSearch, int searchValue, int minimum, int maximum)
+        {
+            while (minimum <= maximum - 1)
+            {
+                int mid = minimum + maximum / 2;
+                if (searchValue == lListSearch.ElementAt(mid))
+                {
+                    return mid;
+                }
+                else if (searchValue < lListSearch.ElementAt(mid))
+                {
+                    maximum = mid -1;
+                }
+                else
+                {
+                    minimum = mid+1;
+                }
+            }
+            return minimum;
+        }
 
         // 4.10 Binary Search Recursive
         #endregion
@@ -167,6 +169,27 @@ namespace Assessement_1_Part_A___Design
         #region UI Buttons
         // 4.11 Button click methods SEARCH - search linked list for an int value entered via textbox
         // a. method sensor A binary search iterative
+        private void ButtonIterativeSearch_A_Click(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(SearchValue_A.Text) && Sensor_A.Count != 0)
+            {
+                int searchVal = int.Parse(SearchValue_A.Text.Trim());
+                int indexFound = BinarySearchIterative(Sensor_A, searchVal, 0, Sensor_A.Count());
+
+
+
+                
+            }
+            else if (Sensor_A.Count == 0)
+            {
+                StatusMessage.Text = "Iterative Search of Sensor A: Unsuccessful - Sensor A requires entries to sort.";
+            }
+            else
+            {
+                StatusMessage.Text = "Iterative Search of Sensor A: Unsuccessful - Search value cannot be empty.";
+            }
+
+        }
         // b. method sensor A binary search recursive
         // c. method sensor B binary search iterative
         // d. method sensor B binary search recursive
@@ -174,9 +197,38 @@ namespace Assessement_1_Part_A___Design
 
         // 4.12 button click methods SORT - sort  linked list using selection andinsertion methods.
         // a. method sensor A selection sort
+        private void ButtonSelectionSort_A_Click(object sender, RoutedEventArgs e)
+        {
+            if (SelectionSort(Sensor_A) && Sensor_A.Count != 0)
+            {
+                StatusMessage.Text = "Selection Sort of Sensor A: Successful";
+                DisplayListboxData(Sensor_A, ListBoxSensorA);
+            }
+            else
+            {
+                StatusMessage.Text = "Selection Sort of Sensor A: Unsuccessful - Sensor A requires entries to sort.";
+            }
+        }
         // b. method sensor A insertion sort
+        private void ButtonInsertionSort_A_Click(object sender, RoutedEventArgs e)
+        {
+           if (InsertionSort(Sensor_A) && Sensor_A.Count != 0)
+            {
+                StatusMessage.Text = "Insertion sort of Sensor A: Successful";
+                DisplayListboxData(Sensor_A, ListBoxSensorA);
+            }
+            else
+            {
+                StatusMessage.Text = "Insertion Sort of Sensor A: Unsuccessful - Sensor A requires entries to sort.";
+            }
+        }
         // c. method sensor B selection sort
+
+
+
         // d. method sensor B insertion sort
+
+
         #endregion
 
         // 4.13 Numeric input control for SIGMA (Min value 10 - max 20) and Mu (Min value 35 - max 75 - DEFAULT 50) - done
@@ -186,9 +238,5 @@ namespace Assessement_1_Part_A___Design
         // 4.15 code must be adequately commented - Map the programming criteria and features to your code/methods by
         // adding comments/regions above the method signatures.
         // Ensure your code is compliant with the CITEMS coding standards (refer http://www.citems.com.au/). 
-
-
-
-
     }
 }

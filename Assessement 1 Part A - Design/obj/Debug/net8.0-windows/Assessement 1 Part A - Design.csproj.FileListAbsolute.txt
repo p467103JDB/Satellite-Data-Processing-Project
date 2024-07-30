@@ -118,3 +118,4 @@ D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design
 D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.pdb
 D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.genruntimeconfig.cache
 D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\ref\Assessement 1 Part A - Design.dll
+C:\Users\p467103\Documents\GitHub\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Galileo6.dll
