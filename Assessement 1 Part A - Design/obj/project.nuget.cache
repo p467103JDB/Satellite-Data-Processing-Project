@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "85cZeV6dJ0AtC7enXsoCrK1pYo4cY2qm7KVtpbOYid6RaFvXYVIo8WPmi13caMLYzvtfD94Ta8r5/lx6ydaOEA==",
+  "dgSpecHash": "8npSV8faiDNmkmN62isBI//L9Gxaa5oyS1Yi0+ciOf6z6BBmsovf2QCKArEc7V0pcmRzeoyou6AXFhsskECbvA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\p467103\\Documents\\GitHub\\Satellite-Data-Processing-Project\\Assessement 1 Part A - Design\\Assessement 1 Part A - Design.csproj",
+  "projectFilePath": "D:\\GitHub Clones\\Satellite-Data-Processing-Project\\Assessement 1 Part A - Design\\Assessement 1 Part A - Design.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\p467103\\.nuget\\packages\\extended.wpf.toolkit\\4.6.1\\extended.wpf.toolkit.4.6.1.nupkg.sha512"
+    "C:\\Users\\jackd\\.nuget\\packages\\extended.wpf.toolkit\\4.6.1\\extended.wpf.toolkit.4.6.1.nupkg.sha512"
   ],
   "logs": []
 }

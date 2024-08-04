@@ -10,7 +10,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections.Generic;
 using System.IO;
-using Galileo6; // i thought it was wrong before... but it was right - import new library
+using Galileo6;
+using System.Diagnostics.Eventing.Reader; // i thought it was wrong before... but it was right - import new library
 // ReadData Decompiled say it's a class - so i need to create an object of the class to use its methods sooo
 // ReadData reader = new ReadData(); is required ahead.
 
@@ -29,21 +30,25 @@ namespace Assessement_1_Part_A___Design
         // 4.1 Two Data Structures - the only global variables that are allowed for this assignment
         LinkedList<double> Sensor_A = new LinkedList<double>();
         LinkedList<double> Sensor_B = new LinkedList<double>();
-       
+        private int indexfound;
+
         // Global Methods
         #region Global Methods
         // 4.2 Load DLL method
         private void LoadData()
         {
-            const int total = 4; // 400 is the max required.
+            const int total = 10; // 400 is the max required.
             Sensor_A.Clear();
             Sensor_B.Clear();
+
+            double mu = double.Parse(MuVal.Text); // Least memory intensive
+            double sigma = double.Parse(SigmaVal.Text);
 
             ReadData readData = new ReadData(); // 4.2 - new instance of library required.
             for (int i = 0; i < total; i++)
             {
-                Sensor_A.AddLast(readData.SensorA(double.Parse(MuVal.Text), double.Parse(SigmaVal.Text))); // Get text from Sigma and MU and parse them.
-                Sensor_B.AddLast(readData.SensorB(double.Parse(MuVal.Text), double.Parse(SigmaVal.Text))); // I think theres probably a better way of doing this but it works for now.
+                Sensor_A.AddLast(readData.SensorA(mu, sigma)); // Get text from Sigma and MU and parse them.
+                Sensor_B.AddLast(readData.SensorB(mu, sigma)); // I think theres probably a better way of doing this but it works for now.
             }
         }
 
@@ -146,23 +151,46 @@ namespace Assessement_1_Part_A___Design
             while (minimum <= maximum - 1)
             {
                 int mid = minimum + maximum / 2;
-                if (searchValue == lListSearch.ElementAt(mid))
+                int roundedDown = (int)Math.Floor(lListSearch.ElementAt(mid));  
+
+                if (searchValue == roundedDown) // Round down to always find the number regardless of decimal. (int)Math.Floor(doubleValue)
                 {
                     return mid;
                 }
-                else if (searchValue < lListSearch.ElementAt(mid))
+                else if (searchValue < roundedDown)
                 {
-                    maximum = mid -1;
+                    maximum = maximum - 1; // psuedo code was wrong XD
                 }
                 else
                 {
-                    minimum = mid+1;
+                    minimum = minimum + 1; // psuedo code was wrong
                 }
             }
-            return minimum;
+            return minimum -1;
         }
 
         // 4.10 Binary Search Recursive
+        private int BinarySearchRecursive (LinkedList<double> lListSearch, int searchValue, int minimum, int maximum)
+        {
+            if (minimum <= maximum - 1)
+            {
+                int mid = minimum - maximum / 2;
+                int roundedDown = (int)Math.Floor(lListSearch.ElementAt(mid));
+                if (searchValue == roundedDown)
+                {
+                    return mid;
+                }
+                else if(searchValue < roundedDown)
+                {
+                    return BinarySearchRecursive(lListSearch, searchValue, minimum, mid -1);
+                }
+                else
+                {
+                    return BinarySearchRecursive(lListSearch, searchValue, mid + 1, maximum);
+                }
+            }
+            return minimum -1;
+        }
         #endregion
 
         // UI Buttons
@@ -173,11 +201,10 @@ namespace Assessement_1_Part_A___Design
         {
             if (!string.IsNullOrEmpty(SearchValue_A.Text) && Sensor_A.Count != 0)
             {
-                int searchVal = int.Parse(SearchValue_A.Text.Trim());
+                int searchVal = int.Parse(SearchValue_A.Text);
+                // START TIMER HERE <-
                 int indexFound = BinarySearchIterative(Sensor_A, searchVal, 0, Sensor_A.Count());
-
-
-
+                ListBoxRowFound(indexFound, searchVal);
                 
             }
             else if (Sensor_A.Count == 0)
@@ -188,11 +215,54 @@ namespace Assessement_1_Part_A___Design
             {
                 StatusMessage.Text = "Iterative Search of Sensor A: Unsuccessful - Search value cannot be empty.";
             }
-
         }
         // b. method sensor A binary search recursive
+
+        private void ButtonRecursiveSearch_A_Click(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(SearchValue_A.Text) && Sensor_A.Count != 0)
+            {
+                int searchVal = int.Parse(SearchValue_A.Text);
+                int indexFound = BinarySearchRecursive(Sensor_A, searchVal, 0, Sensor_A.Count());
+                ListBoxRowFound (indexFound, searchVal);
+            }
+            else if (Sensor_A.Count == 0)
+            {
+                StatusMessage.Text = "Recursive Search of Sensor A: Unsuccessful - Sensor A requires entries to sort.";
+            }
+            else
+            {
+                StatusMessage.Text = "Recursive Search of Sensor A: Unsuccessful - Search value cannot be empty.";
+            }
+        }
+
+
         // c. method sensor B binary search iterative
         // d. method sensor B binary search recursive
+
+        private void ListBoxRowFound(int indexFound, int searchVal)
+        {
+            if (indexFound != -1)
+            {
+                // STOP TIMER HERE <-
+                StatusMessage.Text = $"FOUND - Index Numer: {indexFound}";
+                ListBoxSensorA.UnselectAll();
+                ListBoxSensorA.Focus();
+                for (int i = -2; i < 3; i++) // Loop for the amount of rows you want to highlight, in this case it's supposed to be 3 so (i = -1; i < 2) but im matching the initial image.
+                {
+                    try // This might be lazy?? BUT, it will highlight the rest of elements despite being out of range.- ASK MILAN TUESDAY***
+                    {
+                        ListBoxSensorA.SelectedItems.Add(ListBoxSensorA.Items.GetItemAt(indexFound + i));
+                    }
+                    catch (Exception) { }
+                }
+            }
+            else
+            {
+                StatusMessage.Text = $"NOT FOUND - Search Value: {searchVal}";
+            }
+        }
+
 
 
         // 4.12 button click methods SORT - sort  linked list using selection andinsertion methods.
@@ -222,6 +292,7 @@ namespace Assessement_1_Part_A___Design
                 StatusMessage.Text = "Insertion Sort of Sensor A: Unsuccessful - Sensor A requires entries to sort.";
             }
         }
+
         // c. method sensor B selection sort
 
 

@@ -22,7 +22,7 @@
             </ListBox.ItemTemplate>
         </ListView>
 
-        <ListBox x:Name="ListBoxSensorA" Margin="399,40,228,88" ItemsSource="{Binding Sensor_A}" SelectionMode="Multiple">
+        <ListBox x:Name="ListBoxSensorA" Margin="399,40,228,88" ItemsSource="{Binding Sensor_A}" SelectionMode="Extended">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
@@ -52,7 +52,7 @@
         <Button x:Name="ButtonInsertionSort_A" Content="Insertion Sort" HorizontalAlignment="Left" Margin="260,64,0,0" VerticalAlignment="Top" Click="ButtonInsertionSort_A_Click" Width="96"/>
         <Button x:Name="ButtonIterativeSearch_A" Content="Iterative Search" HorizontalAlignment="Left" Margin="260,160,0,0" VerticalAlignment="Top" Width="96" Click="ButtonIterativeSearch_A_Click"/>
         <TextBox x:Name="SearchValue_A" HorizontalAlignment="Left" Margin="260,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96"/>
-        <Button x:Name="ButtonRecursiveSearch_A" Content="Recursive Search" HorizontalAlignment="Left" Margin="260,137,0,0" VerticalAlignment="Top" Width="96"/>
+        <Button x:Name="ButtonRecursiveSearch_A" Content="Recursive Search" HorizontalAlignment="Left" Margin="260,137,0,0" VerticalAlignment="Top" Width="96" Click="ButtonRecursiveSearch_A_Click"/>
     </Grid>
 
 </Window>
