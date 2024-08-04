@@ -11,7 +11,8 @@ using System.Windows.Shapes;
 using System.Collections.Generic;
 using System.IO;
 using Galileo6;
-using System.Diagnostics.Eventing.Reader; // i thought it was wrong before... but it was right - import new library
+using System.Diagnostics.Eventing.Reader;
+using System.Diagnostics; // i thought it was wrong before... but it was right - import new library
 // ReadData Decompiled say it's a class - so i need to create an object of the class to use its methods sooo
 // ReadData reader = new ReadData(); is required ahead.
 
@@ -30,14 +31,13 @@ namespace Assessement_1_Part_A___Design
         // 4.1 Two Data Structures - the only global variables that are allowed for this assignment
         LinkedList<double> Sensor_A = new LinkedList<double>();
         LinkedList<double> Sensor_B = new LinkedList<double>();
-        private int indexfound;
 
         // Global Methods
         #region Global Methods
         // 4.2 Load DLL method
         private void LoadData()
         {
-            const int total = 10; // 400 is the max required.
+            const int total = 400; // 400 is the max required.
             Sensor_A.Clear();
             Sensor_B.Clear();
 
@@ -47,7 +47,7 @@ namespace Assessement_1_Part_A___Design
             ReadData readData = new ReadData(); // 4.2 - new instance of library required.
             for (int i = 0; i < total; i++)
             {
-                Sensor_A.AddLast(readData.SensorA(mu, sigma)); // Get text from Sigma and MU and parse them.
+                Sensor_A.AddLast(readData.SensorA(mu, sigma)); // Get text from Sigma and Mu and parse them.
                 Sensor_B.AddLast(readData.SensorB(mu, sigma)); // I think theres probably a better way of doing this but it works for now.
             }
         }
@@ -72,7 +72,7 @@ namespace Assessement_1_Part_A___Design
         {
             LoadData();
             ShowAllSensorData();
-            DisplayListboxData(Sensor_A, ListBoxSensorA); // Mickey mouse pointless exercise... it's done however
+            DisplayListboxData(Sensor_A, ListBoxSensorA);
             DisplayListboxData(Sensor_B, ListBoxSensorB);
         }
         #endregion
@@ -174,7 +174,7 @@ namespace Assessement_1_Part_A___Design
         {
             if (minimum <= maximum - 1)
             {
-                int mid = minimum - maximum / 2;
+                int mid = minimum + maximum / 2;
                 int roundedDown = (int)Math.Floor(lListSearch.ElementAt(mid));
                 if (searchValue == roundedDown)
                 {
@@ -182,11 +182,11 @@ namespace Assessement_1_Part_A___Design
                 }
                 else if(searchValue < roundedDown)
                 {
-                    return BinarySearchRecursive(lListSearch, searchValue, minimum, mid -1);
+                    return BinarySearchRecursive(lListSearch, searchValue, minimum, maximum - 1);
                 }
                 else
                 {
-                    return BinarySearchRecursive(lListSearch, searchValue, mid + 1, maximum);
+                    return BinarySearchRecursive(lListSearch, searchValue, minimum + 1, maximum);
                 }
             }
             return minimum -1;
@@ -199,12 +199,18 @@ namespace Assessement_1_Part_A___Design
         // a. method sensor A binary search iterative
         private void ButtonIterativeSearch_A_Click(object sender, RoutedEventArgs e)
         {
-            if (!string.IsNullOrEmpty(SearchValue_A.Text) && Sensor_A.Count != 0)
+            if (!string.IsNullOrEmpty(SearchValue_A.Text) && Sensor_A.Count != 0  && int.TryParse(SearchValue_A.Text, out _)) // just want to see if it's true "_" means discard after.
             {
+                var timer = new Stopwatch();
+                timer.Start();
+
                 int searchVal = int.Parse(SearchValue_A.Text);
-                // START TIMER HERE <-
                 int indexFound = BinarySearchIterative(Sensor_A, searchVal, 0, Sensor_A.Count());
-                ListBoxRowFound(indexFound, searchVal);
+                ListBoxRowFound_A(indexFound, searchVal);
+
+                timer.Stop();
+                TimeSpan elapsed = timer.Elapsed;
+                TextBoxTime_ISA.Text = $"{elapsed.Milliseconds} MS";
                 
             }
             else if (Sensor_A.Count == 0)
@@ -216,15 +222,23 @@ namespace Assessement_1_Part_A___Design
                 StatusMessage.Text = "Iterative Search of Sensor A: Unsuccessful - Search value cannot be empty.";
             }
         }
-        // b. method sensor A binary search recursive
 
+        // b. method sensor A binary search recursive
         private void ButtonRecursiveSearch_A_Click(object sender, RoutedEventArgs e)
         {
-            if (!string.IsNullOrEmpty(SearchValue_A.Text) && Sensor_A.Count != 0)
+            if (!string.IsNullOrEmpty(SearchValue_A.Text) && Sensor_A.Count != 0 && int.TryParse(SearchValue_A.Text, out _)) // just want to see if it's true "_" means discard after.
             {
+                var timer = new Stopwatch();
+                timer.Start();
+
                 int searchVal = int.Parse(SearchValue_A.Text);
                 int indexFound = BinarySearchRecursive(Sensor_A, searchVal, 0, Sensor_A.Count());
-                ListBoxRowFound (indexFound, searchVal);
+                ListBoxRowFound_A(indexFound, searchVal);
+
+
+                timer.Stop();
+                TimeSpan elapsed = timer.Elapsed;
+                TextBoxTime_RSA.Text = $"{elapsed.Milliseconds} MS";
             }
             else if (Sensor_A.Count == 0)
             {
@@ -236,16 +250,65 @@ namespace Assessement_1_Part_A___Design
             }
         }
 
-
         // c. method sensor B binary search iterative
-        // d. method sensor B binary search recursive
+        private void ButtonIterativeSearch_B_Click(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(SearchValue_B.Text) && Sensor_B.Count != 0  && int.TryParse(SearchValue_B.Text, out _)) // just want to see if it's true "_" means discard after.
+            {
+                var timer = new Stopwatch();
+                timer.Start();
 
-        private void ListBoxRowFound(int indexFound, int searchVal)
+                int searchVal = int.Parse(SearchValue_B.Text);
+                int indexFound = BinarySearchIterative(Sensor_B, searchVal, 0, Sensor_B.Count());
+                ListBoxRowFound_B(indexFound, searchVal);
+
+                timer.Stop();
+                TimeSpan elapsed = timer.Elapsed;
+                TextBoxTime_ISB.Text = $"{elapsed.Milliseconds} MS";
+
+            }
+            else if (Sensor_A.Count == 0)
+            {
+                StatusMessage.Text = "Iterative Search of Sensor B: Unsuccessful - Sensor B requires entries to sort.";
+            }
+            else
+            {
+                StatusMessage.Text = "Iterative Search of Sensor B: Unsuccessful - Search value cannot be empty.";
+            }
+        }
+
+        // d. method sensor B binary search recursive
+        private void ButtonRecursiveSearch_B_Click(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(SearchValue_B.Text) && Sensor_B.Count != 0 && int.TryParse(SearchValue_B.Text, out _)) // just want to see if it's true "_" means discard after.
+            {
+                var timer = new Stopwatch();
+                timer.Start();
+
+                int searchVal = int.Parse(SearchValue_B.Text);
+                int indexFound = BinarySearchRecursive(Sensor_B, searchVal, 0, Sensor_B.Count());
+                ListBoxRowFound_B(indexFound, searchVal);
+
+
+                timer.Stop();
+                TimeSpan elapsed = timer.Elapsed;
+                TextBoxTime_RSB.Text = $"{elapsed.Milliseconds} MS";
+            }
+            else if (Sensor_A.Count == 0)
+            {
+                StatusMessage.Text = "Recursive Search of Sensor B: Unsuccessful - Sensor B requires entries to sort.";
+            }
+            else
+            {
+                StatusMessage.Text = "Recursive Search of Sensor B: Unsuccessful - Search value cannot be empty.";
+            }
+        }
+
+        private void ListBoxRowFound_A (int indexFound, int searchVal)
         {
             if (indexFound != -1)
             {
-                // STOP TIMER HERE <-
-                StatusMessage.Text = $"FOUND - Index Numer: {indexFound}";
+                StatusMessage.Text = $"FOUND - Node Numer: {indexFound}";
                 ListBoxSensorA.UnselectAll();
                 ListBoxSensorA.Focus();
                 for (int i = -2; i < 3; i++) // Loop for the amount of rows you want to highlight, in this case it's supposed to be 3 so (i = -1; i < 2) but im matching the initial image.
@@ -263,32 +326,68 @@ namespace Assessement_1_Part_A___Design
             }
         }
 
+        private void ListBoxRowFound_B(int indexFound, int searchVal)
+        {
+            if (indexFound != -1)
+            {
+                StatusMessage.Text = $"FOUND - Node Numer: {indexFound}";
+                ListBoxSensorB.UnselectAll();
+                ListBoxSensorB.Focus();
+                for (int i = -2; i < 3; i++) // Loop for the amount of rows you want to highlight, in this case it's supposed to be 3 so (i = -1; i < 2) but im matching the initial image.
+                {
+                    try // This might be lazy?? BUT, it will highlight the rest of elements despite being out of range.- ASK MILAN TUESDAY***
+                    {
+                        ListBoxSensorB.SelectedItems.Add(ListBoxSensorB.Items.GetItemAt(indexFound + i));
+                    }
+                    catch (Exception) { }
+                }
+            }
+            else
+            {
+                StatusMessage.Text = $"NOT FOUND - Search Value: {searchVal}";
+            }
+        }
 
 
         // 4.12 button click methods SORT - sort  linked list using selection andinsertion methods.
         // a. method sensor A selection sort
         private void ButtonSelectionSort_A_Click(object sender, RoutedEventArgs e)
         {
+            var timer = new Stopwatch();
+            timer.Start();
             if (SelectionSort(Sensor_A) && Sensor_A.Count != 0)
             {
                 StatusMessage.Text = "Selection Sort of Sensor A: Successful";
                 DisplayListboxData(Sensor_A, ListBoxSensorA);
+
+                timer.Stop();
+                TimeSpan elapsed = timer.Elapsed;
+                TextBoxTime_SESA.Text = $"{elapsed.Ticks} Ticks";
             }
             else
             {
+                timer.Stop();
                 StatusMessage.Text = "Selection Sort of Sensor A: Unsuccessful - Sensor A requires entries to sort.";
             }
         }
+
         // b. method sensor A insertion sort
         private void ButtonInsertionSort_A_Click(object sender, RoutedEventArgs e)
         {
-           if (InsertionSort(Sensor_A) && Sensor_A.Count != 0)
+            var timer = new Stopwatch();
+            timer.Start();
+            if (InsertionSort(Sensor_A) && Sensor_A.Count != 0)
             {
                 StatusMessage.Text = "Insertion sort of Sensor A: Successful";
                 DisplayListboxData(Sensor_A, ListBoxSensorA);
+
+                timer.Stop();
+                TimeSpan elapsed = timer.Elapsed;
+                TextBoxTime_INSA.Text = $"{elapsed.Ticks} Ticks";
             }
             else
             {
+                timer.Stop();
                 StatusMessage.Text = "Insertion Sort of Sensor A: Unsuccessful - Sensor A requires entries to sort.";
             }
         }
@@ -296,15 +395,52 @@ namespace Assessement_1_Part_A___Design
         // c. method sensor B selection sort
 
 
+        private void ButtonSelectionSort_B_Click(object sender, RoutedEventArgs e)
+        {
+            var timer = new Stopwatch();
+            timer.Start();
+            if (SelectionSort(Sensor_B) && Sensor_B.Count != 0)
+            {
+                StatusMessage.Text = "Selection Sort of Sensor B: Successful";
+                DisplayListboxData(Sensor_B, ListBoxSensorB);
+
+                timer.Stop();
+                TimeSpan elapsed = timer.Elapsed;
+                TextBoxTime_SESB.Text = $"{elapsed.Ticks} Ticks";
+            }
+            else
+            {
+                timer.Stop();
+                StatusMessage.Text = "Selection Sort of Sensor A: Unsuccessful - Sensor A requires entries to sort.";
+            }
+        }
 
         // d. method sensor B insertion sort
+        private void ButtonInsertionSort_B_Click(object sender, RoutedEventArgs e)
+        {
+            var timer = new Stopwatch();
+            timer.Start();
+            if (InsertionSort(Sensor_B) && Sensor_B.Count != 0)
+            {
+                StatusMessage.Text = "Insertion sort of Sensor B: Successful";
+                DisplayListboxData(Sensor_B, ListBoxSensorB);
 
+                timer.Stop();
+                TimeSpan elapsed = timer.Elapsed;
+                TextBoxTime_INSB.Text = $"{elapsed.Ticks} Ticks";
+            }
+            else
+            {
+                timer.Stop();
+                StatusMessage.Text = "Insertion Sort of Sensor B: Unsuccessful - Sensor B requires entries to sort.";
+            }
+        }
 
         #endregion
 
         // 4.13 Numeric input control for SIGMA (Min value 10 - max 20) and Mu (Min value 35 - max 75 - DEFAULT 50) - done
 
-        // 4.14 textboxes for search value
+        // 4.14 textboxes for search value - done
 
         // 4.15 code must be adequately commented - Map the programming criteria and features to your code/methods by
         // adding comments/regions above the method signatures.
