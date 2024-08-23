@@ -118,3 +118,84 @@ D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design
 D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.pdb
 D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.genruntimeconfig.cache
 D:\GitHub Clones\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\ref\Assessement 1 Part A - Design.dll
+C:\Users\p467103\Documents\GitHub\Satellite-Data-Processing-Project\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Galileo6.dll
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Assessement 1 Part A - Design.exe
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Assessement 1 Part A - Design.deps.json
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Assessement 1 Part A - Design.runtimeconfig.json
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Assessement 1 Part A - Design.dll
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Assessement 1 Part A - Design.pdb
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Xceed.Wpf.AvalonDock.dll
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Xceed.Wpf.Toolkit.dll
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Galileo6.dll
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.csproj.AssemblyReference.cache
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design_MarkupCompile.cache
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design_MarkupCompile.lref
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.g.resources
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.AssemblyInfoInputs.cache
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.AssemblyInfo.cs
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.csproj.CoreCompileInputs.cache
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.csproj.CopyComplete
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.dll
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\refint\Assessement 1 Part A - Design.dll
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.pdb
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.genruntimeconfig.cache
+C:\Users\p467103\Desktop\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\ref\Assessement 1 Part A - Design.dll
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Assessement 1 Part A - Design.exe
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Assessement 1 Part A - Design.deps.json
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Assessement 1 Part A - Design.runtimeconfig.json
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Assessement 1 Part A - Design.dll
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Assessement 1 Part A - Design.pdb
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Xceed.Wpf.AvalonDock.dll
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Xceed.Wpf.Toolkit.dll
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\bin\Debug\net8.0-windows\Galileo6.dll
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.csproj.AssemblyReference.cache
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design_MarkupCompile.cache
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design_MarkupCompile.lref
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.g.resources
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.AssemblyInfoInputs.cache
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.AssemblyInfo.cs
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.csproj.CoreCompileInputs.cache
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.csproj.CopyComplete
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.dll
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\refint\Assessement 1 Part A - Design.dll
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.pdb
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\Assessement 1 Part A - Design.genruntimeconfig.cache
+C:\Users\p467103\Downloads\JDB P467103 AT 1 B\Satellite-Data-Processing-Project-Dev_Branch\Assessement 1 Part A - Design\obj\Debug\net8.0-windows\ref\Assessement 1 Part A - Design.dll

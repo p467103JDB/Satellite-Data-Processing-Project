@@ -7,11 +7,12 @@
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <xctk:DecimalUpDown x:Name="SigmaVal" Margin="32,370,672,10" Minimum="10.0" Maximum="20.0" Value="10.0" />
-        <xctk:DecimalUpDown x:Name="MuVal" Margin="128,370,576,10" Minimum="35.0" Maximum="75.0" Value="50.0" />
-        <ListBox x:Name="ListBoxSensorData" Margin="32,64,576,101" ItemsSource="{Binding combinedList}">
+    <Grid Background="WhiteSmoke">
+        <xctk:DecimalUpDown x:Name="SigmaVal" Margin="30,347,674,33" Minimum="10.0" Maximum="20.0" Value="10.0" AllowTextInput="False"/>
+        <xctk:DecimalUpDown x:Name="MuVal" Margin="126,347,578,33" Minimum="35.0" Maximum="75.0" Value="50.0" AllowTextInput="False"/>
+        <ListView x:Name="ListViewSensorData" Margin="32,40,576,125">
             <ListBox.ItemTemplate>
+                <!-- is this legal in the assignment?!?!? -->
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="{Binding Path=Column1}" MinWidth="64"/>
@@ -19,24 +20,62 @@
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
-        </ListBox>
-        
-        <ListView x:Name="ListViewSensorA" Margin="400,64,227,64">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Sensor A" Width="130"/>
-                </GridView>
-            </ListView.View>
         </ListView>
-        <ListView x:Name="ListViewSensorB" Margin="595,64,32,64">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Sensor B" Width="130"/>
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <Button x:Name="Reset_Data" Content="Load Sensor Data" HorizontalAlignment="Left" Margin="80,322,0,0" VerticalAlignment="Top" Height="32" Width="96" Click="Load_Data_Click"/>
 
+        <ListBox x:Name="ListBoxSensorA" Margin="381,41,304,87" ItemsSource="{Binding Sensor_A}" SelectionMode="Extended">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Path=Column}" MinWidth="64"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <ListBox x:Name="ListBoxSensorB" Margin="640,40,44,88" ItemsSource="{Binding Sensor_A}" SelectionMode="Extended">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Path=Column}" MinWidth="64"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button x:Name="Reset_Data" Content="Load Sensor Data" HorizontalAlignment="Left" Margin="80,288,0,0" VerticalAlignment="Top" Height="32" Width="96" Click="Load_Data_Click"/>
+        <Button x:Name="ButtonSelectionSort_A" Content="Selection Sort" HorizontalAlignment="Left" Margin="260,40,0,0" VerticalAlignment="Top" Click="ButtonSelectionSort_A_Click" Width="96"/>
+        <StatusBar x:Name="StatusStrip" Margin="0,390,0,0">
+            <StatusBarItem>
+                <TextBox x:Name="StatusMessage" IsReadOnly="True" Background="Transparent" BorderBrush="Transparent" Foreground="Black" VerticalAlignment="Center"/>
+            </StatusBarItem>
+            <StatusBar/>
+        </StatusBar>
+        <Button x:Name="ButtonInsertionSort_A" Content="Insertion Sort" HorizontalAlignment="Left" Margin="260,97,0,0" VerticalAlignment="Top" Click="ButtonInsertionSort_A_Click" Width="96"/>
+        <Button x:Name="ButtonIterativeSearch_A" Content="Iterative Search" HorizontalAlignment="Left" Margin="260,296,0,0" VerticalAlignment="Top" Width="96" Click="ButtonIterativeSearch_A_Click"/>
+        <TextBox x:Name="SearchValue_A" HorizontalAlignment="Left" Margin="260,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96" PreviewTextInput="SearchValue_A_PreviewTextInput"  MaxLines="1"/>
+        <Button x:Name="ButtonRecursiveSearch_A" Content="Recursive Search" HorizontalAlignment="Left" Margin="260,234,0,0" VerticalAlignment="Top" Width="96" Click="ButtonRecursiveSearch_A_Click"/>
+        <Label Content="Sensor A" HorizontalAlignment="Left" Margin="382,10,0,0" VerticalAlignment="Top" Width="114" FontWeight="Bold" FontSize="16"/>
+        <Label Content="Sensor B" HorizontalAlignment="Left" Margin="640,9,0,0" VerticalAlignment="Top" Width="114" FontWeight="Bold" FontSize="16"/>
+        <Label Content="Search Value" HorizontalAlignment="Left" Margin="269,162,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBoxTime_RSA" HorizontalAlignment="Left" Margin="260,259,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="96" IsReadOnly="True"/>
+        <TextBox x:Name="TextBoxTime_ISA" HorizontalAlignment="Left" Margin="260,321,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="96" IsReadOnly="True"/>
+        <TextBox x:Name="TextBoxTime_SESA" HorizontalAlignment="Left" Margin="260,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="96" IsReadOnly="True"/>
+        <TextBox x:Name="TextBoxTime_INSA" HorizontalAlignment="Left" Margin="260,122,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="96" IsReadOnly="True"/>
+
+
+        <Button x:Name="ButtonSelectionSort_B" Content="Selection Sort" HorizontalAlignment="Left" Margin="521,40,0,0" VerticalAlignment="Top"  Width="96" Click="ButtonSelectionSort_B_Click"/>
+        <Button x:Name="ButtonInsertionSort_B" Content="Insertion Sort" HorizontalAlignment="Left" Margin="521,97,0,0" VerticalAlignment="Top"  Width="96" Click="ButtonInsertionSort_B_Click"/>
+        <Button x:Name="ButtonIterativeSearch_B" Content="Iterative Search" HorizontalAlignment="Left" Margin="521,296,0,0" VerticalAlignment="Top" Width="96" Click="ButtonIterativeSearch_B_Click" />
+        <Button x:Name="ButtonRecursiveSearch_B" Content="Recursive Search" HorizontalAlignment="Left" Margin="521,234,0,0" VerticalAlignment="Top" Width="96" Click="ButtonRecursiveSearch_B_Click" />
+
+        <TextBox x:Name="SearchValue_B" HorizontalAlignment="Left" Margin="521,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96" PreviewTextInput="SearchValue_B_PreviewTextInput" MaxLines="1"/>
+        <Label Content="Search Value" HorizontalAlignment="Left" Margin="530,162,0,0" VerticalAlignment="Top"/>
+
+        <TextBox x:Name="TextBoxTime_RSB" HorizontalAlignment="Left" Margin="521,259,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="96" IsReadOnly="True"/>
+        <TextBox x:Name="TextBoxTime_ISB" HorizontalAlignment="Left" Margin="521,321,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="96" IsReadOnly="True"/>
+        <TextBox x:Name="TextBoxTime_SESB" HorizontalAlignment="Left" Margin="521,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="96" IsReadOnly="True"/>
+        <TextBox x:Name="TextBoxTime_INSB" HorizontalAlignment="Left" Margin="521,122,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="96" IsReadOnly="True"/>
+        <Label Content="Sigma" HorizontalAlignment="Left" Margin="124,321,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.04,0.555"/>
+        <Label Content="Mu" HorizontalAlignment="Left" Margin="30,321,0,0" VerticalAlignment="Top"/>
     </Grid>
 
 </Window>
